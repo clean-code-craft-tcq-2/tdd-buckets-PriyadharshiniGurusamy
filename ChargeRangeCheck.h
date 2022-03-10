@@ -7,12 +7,12 @@
 class ChargeRangeCheck
 {
 public:
-  ChargeRangeCheck();
-  ~ChargeRangeCheck();
+  ChargeRangeCheck(){}
+  ~ChargeRangeCheck(){}
   
-  void getRange(std::vector<int> inputValues);
-  int findRange(std::vector<int> inputValues, int rangeMinValue );
-  void printRange();
+  void getRangeandReadings(std::vector<int> inputValues);
+  int getCountOfRange(std::vector<int> inputValues, int rangeMinValue );
+  void printRangeandReadings();
   
   
   /* Variables */
