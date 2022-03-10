@@ -26,7 +26,7 @@ int ChargeRangeCheck::getCountOfRange(std::vector<int> inputValues, int rangeMin
           totalcount = totalcount + count;
           value++;
         }
-        else if ((count == 0) || (value > inputValues.back())
+        else if ((count == 0) || (value > inputValues.back()))
         {
             newRange.second = value-1;
             break;
