@@ -1,5 +1,6 @@
 #include "ChargeRangeCheck.h"
-#inlcude <algorithm>
+#include <algorithm>
+#include <cstdio>
 
 void ChargeRangeCheck::getRangeandReadings(std::vector<int> inputValues)
 {
@@ -17,7 +18,7 @@ int ChargeRangeCheck::getCountOfRange(std::vector<int> inputValues, int rangeMin
     Range newRange;
     newRange.first = rangeMinValue;
     int value  = rangeMinValue;
-    for(; value <= inputValues.back();)
+    for(; ;)
     {
         int count = std::count(inputValues.begin(), inputValues.end(),value );
         if(count > 0)
@@ -25,16 +26,11 @@ int ChargeRangeCheck::getCountOfRange(std::vector<int> inputValues, int rangeMin
           totalcount = totalcount + count;
           value++;
         }
-        if (count == 0)
+        else if ((count == 0) || (value > inputValues.back())
         {
             newRange.second = value-1;
             break;
         }
-    }
-    if(value > inputValues.back())
-    {
-        newRange.second = value-1;
-        
     }
     v_rangeCount.push_back(std::make_pair(newRange, totalcount));    
     return totalcount;
