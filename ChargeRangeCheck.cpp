@@ -14,9 +14,10 @@ void ChargeRangeCheck::getRangeandReadings(std::vector<int> inputValues)
 
 int ChargeRangeCheck::getCountOfRange(std::vector<int> inputValues, int rangeMinValue )
 {
-    int totalcount, count = 0;
+    int totalcount = 0;
+    int count = 0;
     int value  = rangeMinValue;
-    while ((count = std::count(inputValues.begin(), inputValues.end(),value )))
+    while (count = std::count(inputValues.begin(), inputValues.end(),value ))
     {
         totalcount = totalcount + count;
         value++;
